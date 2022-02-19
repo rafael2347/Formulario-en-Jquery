@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacta con nosotros</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="validacion.css">
+    
+</head>
+<body>
+	<main>
+		<div>
+            <img style="width:100px; height:130px;" src="logo.jpg" class="imagen-logo">
+        </div>
+		<form action="" class="formulario" id="formulario">
+			<!-- nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="ej: Rafa o Antonio">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El Nombre tiene que ser de 4 a 16 dígitos y solo puede contener  letras </p>
+			</div>
+
+
+			<!-- Aquí vamos a validar los apellidos -->
+			<div class="formulario__grupo" id="grupo__segundonombre">
+				<label for="segundonombre" class="formulario__label">Apellidos</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="segundonombre" id="segundonombre" placeholder="ej: González Martín">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El Apellido tiene que ser de 4 a 16 dígitos y solo puede contener  letras</p>
+			</div>
+
+			
+			<!-- Grupo: Contraseña -->
+			<div class="formulario__grupo" id="grupo__contrasena">
+				<label for="contrasena" class="formulario__label">Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="contrasena" id="contrasena">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos y puede contener letras mayusculas y minusculas y tambien números.</p>
+			</div>
+
+			<!-- Repetir contraseña -->
+			<div class="formulario__grupo" id="grupo__contrasena2">
+				<label for="contrasena2" class="formulario__label">Repetir Contraseña</label>
+				<div class="formulario__grupo-input">
+					<input type="password" class="formulario__input" name="contrasena2" id="contrasena2">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+			</div>
+
+			<!-- Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo y el @.</p>
+			</div>
+
+			<!-- Código Postal -->
+			<div class="formulario__grupo" id="grupo__postal">
+				<label for="postal" class="formulario__label">Código Postal</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="postal" id="postal" placeholder="18015">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El código postal solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+
+			<!-- Area de texto -->
+
+				<p>
+					<b><label type="text" id="nombre">Deja tu comentario</label></b>
+					<input type="text"  id="nombretxt" class="areadetexto" placeholder="Deja aquí tu comentario...">
+					
+				</p>
+			
+
+
+			<!-- Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
+			<!-- Mensaje de error -->
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<!-- Boton de validar texto -->
+			
+  			<div class="formulario__grupo formulario__grupo-btn-enviar">
+			
+				<button id="boton-guardar" class="formulario__btn">Analizar Comentario</button>
+    			
+  			</div>
+
+			<!-- Boton de Enviar -->
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">Enviar</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito"  id="boton-guardar">Formulario enviado exitosamente!</p>
+			</div>
+			<!-- Boton de Limpiar -->
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="reset" class="formulario__btn">Limpiar Formulario</button>
+				
+			</div>
+			<!-- Boton de volver -->
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button onclick="location.href='Proyecto Fundición.html'" class="formulario__btn">Volver</button>
+				
+			</div>
+
+		</form>
+		
+        
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="analizartexto.js"></script> 
+	<script src="validacion.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	
+     
+</body>
+</html>
